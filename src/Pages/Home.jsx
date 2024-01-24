@@ -9,14 +9,25 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <Box sx={{color:'white', margin:'10px auto', maxWidth:'400px', minWidth:'100px', border:'2px solid white'}}>
-        <h1>Shop the exciting videos</h1>
-        <p>We bring you the exitig videos to use and showcase yourself</p>
+      <Box
+        sx={{
+          color: "white",
+          margin: "10px auto",
+          maxWidth: "500px",
+          minWidth: "100px",
+        }}
+      >
+        <h1 style={{textAlign:'center', fontFamily:'Lato', fontSize:'4rem'}}>Shop the exciting videos</h1>
+        <p color="#405060" style={{marginBottom:'40px',fontFamily:"Poppins", fontSize:'1.5rem', width:'660px'}}>
+          {" "}
+          At TruAD, you can! Purchase your favorite videos and they’re yours to
+          keep. Watch them whenever you want, even offline.
+        </p>
       </Box>
       <Trending />
       <Collections />
     </div>
-  )
+  );
 }
 
 export default Home

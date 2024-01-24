@@ -62,7 +62,7 @@ const Login = () => {
     e.preventDefault();
     try {
       loading = true
-      const data = await axios.post(
+      await axios.post(
         `${import.meta.env.VITE_APP_SERVER_URL}/auth/login`,
         formData
       );
@@ -75,18 +75,21 @@ const Login = () => {
   return (
     <>
       <Header />
+      <Typography color="white" margin="0 auto" width="90wh">Join TruAD company now</Typography>
       <div
         style={{
           width: "600px",
           margin: "0 auto",
           border: "1px solid grey",
           borderRadius: "10px",
+          height:'70vh'
         }}
       >
-        <Typography color="white">Join TruAD company now</Typography>
         <Box
           border="2px solid white"
           width="500px"
+          height='60vh'
+          margin='0 auto'
           sx={{ backgroundColor: "white" }}
         >
           <Typography

@@ -1,5 +1,6 @@
-import {Box, Button, styled} from '@mui/material'
-import {useLocation} from 'react-router-dom'
+import {Box, Button, styled,Typography} from '@mui/material'
+import {useLocation, useNavigate} from 'react-router-dom'
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 //styled Components
 const Container = styled(Box)`
   color: white;
@@ -7,15 +8,37 @@ const Container = styled(Box)`
   display: flex;
   justify-content: space-between;
 `
+const Text = styled(Typography)`
+  font-size: 2rem;
+  cursor: pointer;
+
+`
+const Btn = styled(Button)`
+  color: white;
+text-transform: capitalize;
+border-radius: 10px;
+`
 const Header = () => {
+  const Navigate = useNavigate()
   const location = useLocation()
   return (
     <Container>
-      <Box >TruAD</Box>
-      {location.pathname === '/login' ? (<Button>Back to Home</Button> ): (
-      <Button variant='outlined' sx={{color:'white'}}>Login</Button> )}
+      <Box>
+        <Text variant="h4" >
+          TruAD
+        </Text>
+      </Box>
+      {location.pathname === "/login" ? (
+        <Btn variant="outlined" onClick={() => Navigate("/")}>
+          <ChevronLeftIcon fontSize="small" /> Back
+        </Btn>
+      ) : (
+        <Button variant="outlined" sx={{ color: "white" }}>
+          Login
+        </Button>
+      )}
     </Container>
-  )
+  );
 }
 
 export default Header

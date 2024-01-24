@@ -68,10 +68,14 @@ setVideoId(id)
   }
   return (
     <>
-      <Main sx={{ backgroundImage: `url(${BannerImage})` }}>
+      <Main
+        sx={{
+          backgroundImage: `url("https://v3img.voot.com/v3Storage/assets/the_dark_knight_1920x1080-1685950193383.jpg")`,
+        }}
+      >
         <Box display="flex" justifyContent="flex-end">
-          <Typography variant="h4" color="white" margin="20px">
-            Today Trending
+          <Typography variant="h4" color="white" margin="5px" marginRight='80px'fontFamily='Ubuntu' fontWeight='900' fontSize='2rem'>
+            Trending Today
           </Typography>
         </Box>
       </Main>
