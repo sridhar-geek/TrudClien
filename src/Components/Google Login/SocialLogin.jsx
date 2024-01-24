@@ -5,7 +5,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 /**Import functions form other files */
-import { app } from "./firebase";
+import { app } from "./Firebase";
 import Loader from "../Loader";
 
 //styled components
